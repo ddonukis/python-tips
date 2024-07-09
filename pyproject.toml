@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "demo"
+version = "0.1.0"
+description = ""
+authors = ["Dmytro Donukis <dmytro.donukis@cognite.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "*"
+jupyter = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
