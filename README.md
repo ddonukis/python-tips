@@ -96,3 +96,15 @@ You can easily get this path with the command:
 poetry env info | awk '/^Executable/{print $2}' | head -1
 ```
 This command prints the info, then uses `awk` cli tool to find all lines that start with `"Executable"` string, outputs the second column (assuming space separated data), then takes only the first row using `head`.
+
+### Set the python interpreter in VS Code
+
+Open the current folder in VS Code.
+```bash
+code .
+```
+
+Open the command palette (CMD + P). Start typing "Python: Select Interpreter". You should see the command highlighted. Tap the Enter key. Select "Enter interpreter path". Insert the python executable path that we got in the previous step from poetry env info.
+![VS Code Command Palette with "Python: Select Interpreter" highlighted](vs_code_interpreter.png "VS Code Command Palette with 'Python: Select Interpreter' highlighted").
+
+Now your editor should correctly highlight the code and. You may need to restart VS Code before it takes effect.
