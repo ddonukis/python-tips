@@ -108,3 +108,26 @@ Open the command palette (CMD + P). Start typing "Python: Select Interpreter". Y
 ![VS Code Command Palette with "Python: Select Interpreter" highlighted](vs_code_interpreter.png "VS Code Command Palette with 'Python: Select Interpreter' highlighted").
 
 Now your editor should correctly highlight the code and. You may need to restart VS Code before it takes effect.
+
+### Install dependencies
+```bash
+poetry install
+```
+This will install the dpendencies from the lock file (if available) or based on the pyporject.toml and then create a lock file.
+
+You can update dependenices if new versions matching the version requirment spec are available.
+```bash
+poetry update
+```
+
+### Run python code
+You need to use the correct python interpreter so that all the dependencies are found correctly. `poetry run` uses the correct virtual environment.
+```bash
+poetry run python demo_script.py
+```
+Or you can active the virtual environment first and the run the python script:
+```bash
+poetry shell
+
+python demo_script.py
+```
